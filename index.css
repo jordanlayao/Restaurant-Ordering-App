@@ -1,46 +1,67 @@
+/* helpful defaults */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+/* center the card */
 body {
-    margin: 0;
-    background: #FFFAEE;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 90px 0px;
+  margin: 0;
+  background: #FFFAEE;
+  display: grid;
+  place-items: center;
+  padding: 90px 0;           /* keep your vertical breathing room */
+  min-height: 100svh;        /* handles mobile viewport units nicely */
 }
 
+/* the card */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 56px;
-    width: 100%;
-    margin: 0;
-
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;       /* let children use full width */
+  gap: 56px;
+  width: min(536px, 100% - 32px);  /* responsive max width */
+  margin: 0;
 }
 
+/* make the parent of .item a flex column so children can grow */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-self: stretch;
+}
 
-
-
+/* each row fills horizontally */
 .item {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    align-self: stretch;
-    width: 100%;
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;               /* fills the .items width */
 }
 
+/* image + details layout */
+.item-image img {
+  display: block;
+  width: 72px;               /* example; adjust as needed */
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* let the text area expand and push the button to the end */
 .item-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    flex: 1;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1;                   /* this is what makes it fill the row */
 }
 
 .add-button {
-    width: 36px;
-    height: 36px;
+  inline-size: 40px;
+  block-size: 40px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
 }
