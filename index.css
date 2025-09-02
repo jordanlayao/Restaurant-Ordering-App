@@ -2,66 +2,117 @@
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 
-/* center the card */
-body {
+p {
   margin: 0;
-  background: #FFFAEE;
-  display: grid;
-  place-items: center;
-  padding: 90px 0;           /* keep your vertical breathing room */
-  min-height: 100svh;        /* handles mobile viewport units nicely */
+  font-family: "Inter", sans-serif;
+  color: #201910;
 }
 
-/* the card */
+/* center the content */
+body {
+  margin: 0;
+  display: grid;
+  background: #FFFAEE;
+  place-items: center;
+  padding: 90px 0;
+}
+
+/* main container */
 main {
   display: flex;
   flex-direction: column;
-  align-items: stretch;       /* let children use full width */
+  align-items: stretch;
   gap: 56px;
-  width: min(536px, 100% - 32px);  /* responsive max width */
   margin: 0;
+  width: 536px;
 }
 
-/* make the parent of .item a flex column so children can grow */
+/* Item Card */
 .items {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   width: 100%;
   align-self: stretch;
+  gap: 24px;
 }
 
-/* each row fills horizontally */
 .item {
   display: flex;
   align-items: center;
-  gap: 16px;
-  width: 100%;               /* fills the .items width */
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E3E3E3;
+  gap: 24px;
 }
 
-/* image + details layout */
 .item-image img {
   display: block;
-  width: 72px;               /* example; adjust as needed */
+  width: 72px;
   height: 72px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
-/* let the text area expand and push the button to the end */
 .item-details {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
-  flex: 1;                   /* this is what makes it fill the row */
+  flex: 1;
+  flex-wrap: nowrap; 
 }
+
+.item-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;  
+}
+
+.detail-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Button */
 
 .add-button {
   inline-size: 40px;
   block-size: 40px;
   border-radius: 999px;
-  border: 0;
+  border: 1px solid #D5D5D5;
+  background: #FAFAFA;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
 }
+
+.add-button:hover {
+  background: #ececec;
+}
+
+/* Item Card Typeography */
+
+.item-title{
+  color: #201910;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 24px */
+  letter-spacing: -0.25px;
+}
+
+.item-ingredients {
+  color: #8B8B8B;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+}
+
+.item-price {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 16px */
+}
+
