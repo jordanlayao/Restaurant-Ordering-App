@@ -17,33 +17,54 @@
                 <img src="images/header.png" alt="picture of jimmy's dinner logo">
             </header>
             
-            <section class="items">
+            <section class="main-container" id="main-container"></section>
 
-                <div class="item">
-                    <div class="item-image">
-                        <img src="images/pizza.png" alt="pizza">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-details-container">
-                            <div class="detail-header">
-                                <p class="item-title">Pizza</p>
-                                <p class="item-ingredients">pepperoni, mushrom, mozarella</p>
-                            </div>
-                            <div class="detail-footer">
-                                <p class="item-price">$14</p>
-                            </div>
-                        </div>
-                        
-                        <button class="add-button">+</button>
-                    
-                    </div>
+            <!-- Order / Cart -->
+            <section id="order" class="order-hidden">
+                
+                <h3 class="order-title">Your order</h3>
+                <div id="order-items" class="order-items"></div>
+
+                <div>
+                    <p>Total price:</p>
+                    <p id="order-total-amount">$0</p>
                 </div>
+
+                <button id="btn-complete" class="btn-primary">Complete Order</button>
             
             </section>
+
+            <!-- Checkout Modal -->
+            <div id="modal-overlay" class="modal-overlay hidden" aria-hidden="true">
+
+                <div id="modal">
+                    
+                    <button id="modal-close" class="modal-close" aria-label="Close">x</button>
+                    
+                    <!-- Payment Form -->
+                    <div id="modal-fom">
+                        <h3 class="modal-title"> Enter card details</h3>
+                        <form id="pay-form" class="pay-form">
+                            <input required id="input-name" name="name" placeholder="Enter your name"/>
+                            <input required id="input-card" name="card" placeholder="Enter your card number"/>
+                            <input required id="input-cvv" name="cvv" placeholder="Enter CVV"/>
+                        </form>
+                    </div>
+
+                    <!-- Success State -->
+                     <div id="modal-success" class="modal-sucess hidden" role="alert">
+                        <img class="sucess-icon"></img>
+                        <h3 class="sucess-title">Thank you <span id="sucess-name">Friend!</span></h3>
+                        <p>Your order is on the way</p>
+                     </div>
+                
+                </div>
+
+            </div> 
         
         </main>
 
-        <script src="index.js"></script>
+        <script src="index.js" type="module"></script>
 
     </body>
 
