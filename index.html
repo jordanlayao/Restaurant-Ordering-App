@@ -20,48 +20,29 @@
             <section class="main-container" id="main-container"></section>
 
             <!-- Order / Cart -->
-            <section id="order" class="order-hidden">
+            <section id="order" class="order">
+                <div id = "top-order" class ="top-order">
+                    
+                    <div id="order-items" class="order-items">
+                        <p>Pizza</p>
+                        <p>Pizza</p>
+                        <p>Pizza</p>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div>
+                        <p>Total price:</p>
+                        <p id="order-total-amount">$0</p>
+                    </div>
                 
-                <h3 class="order-title">Your order</h3>
-                <div id="order-items" class="order-items"></div>
-
-                <div>
-                    <p>Total price:</p>
-                    <p id="order-total-amount">$0</p>
                 </div>
 
                 <button id="btn-complete" class="btn-primary">Complete Order</button>
             
             </section>
 
-            <!-- Checkout Modal -->
-            <div id="modal-overlay" class="modal-overlay hidden" aria-hidden="true">
-
-                <div id="modal">
-                    
-                    <button id="modal-close" class="modal-close" aria-label="Close">x</button>
-                    
-                    <!-- Payment Form -->
-                    <div id="modal-fom">
-                        <h3 class="modal-title"> Enter card details</h3>
-                        <form id="pay-form" class="pay-form">
-                            <input required id="input-name" name="name" placeholder="Enter your name"/>
-                            <input required id="input-card" name="card" placeholder="Enter your card number"/>
-                            <input required id="input-cvv" name="cvv" placeholder="Enter CVV"/>
-                        </form>
-                    </div>
-
-                    <!-- Success State -->
-                     <div id="modal-success" class="modal-sucess hidden" role="alert">
-                        <img class="sucess-icon"></img>
-                        <h3 class="sucess-title">Thank you <span id="sucess-name">Friend!</span></h3>
-                        <p>Your order is on the way</p>
-                     </div>
-                
-                </div>
-
-            </div> 
-        
+                   
         </main>
 
         <script src="index.js" type="module"></script>

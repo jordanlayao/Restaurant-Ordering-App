@@ -33,3 +33,5 @@ function getMenuArray(array){
 }
 
 document.getElementById('main-container').innerHTML = getMenuArray(menuArray)
+
+
