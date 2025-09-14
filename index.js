@@ -19,7 +19,7 @@ function getMenuArray(array){
         <div class="item-details-container">
           <div class="detail-header">
               <p class="item-title">${name}</p>
-              <p class="item-ingredients">${ingredients}</p>
+              <p class="item-ingredients">${ingredients.join(', ')}</p>
           </div>
           <div class="detail-footer">
             <p class="item-price">$${price}</p>

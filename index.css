@@ -164,6 +164,11 @@ main {
   line-height: 100%;
   cursor: pointer;
   text-decoration-line: underline;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover{
+  color: rgb(176, 5, 5);
 }
 
 .row-item-title{
@@ -195,6 +200,11 @@ main {
   font-weight: 500;
   line-height: 100%; /* 24px */
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover{
+  background: rgb(176, 5, 5);
 }
 
 .total-price {
