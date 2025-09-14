@@ -184,7 +184,7 @@ main {
 
 .btn-primary {
   display: flex;
-  padding: 24px 142px;
+  padding: 24px 24px;
   justify-content: center;
   align-items: center;
   gap: 16px;
@@ -195,12 +195,13 @@ main {
   background: #DC2121;
   border: none;
   color: #FFF;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 100%; /* 24px */
+  line-height: 100%;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   transition: background-color 0.3s ease;
+  margin: 0;
 }
 
 .btn-primary:hover{
@@ -218,5 +219,39 @@ main {
   font-weight: 600;
   line-height: 100%; /* 32px */
   letter-spacing: -0.5px;
+}
+
+/* Modal */
+
+.modal{
+  display: flex;
+  flex-direction: column;
+  width: 536px;
+  padding: 32px 24px;
+  gap: 64px;
+  background: #18ec8c;
+  
+}
+
+.modal-form {
+  width: 100%;
+  background: #ec7418;
+}
+
+.pay-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  background: #ec18ba;
+  margin: 0;
+}
+
+.pay-form input {
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
