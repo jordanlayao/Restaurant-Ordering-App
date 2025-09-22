@@ -221,21 +221,27 @@ main {
   letter-spacing: -0.5px;
 }
 
-/* Modal */
+/* Checkout Modal */
 
-.modal{
+.checkout-modal {
   display: flex;
   flex-direction: column;
   width: 536px;
+  height: 529px;
   padding: 32px 24px;
   gap: 64px;
-  background: #18ec8c;
-  
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid #D4D4D4;
+  background: #FFFAEE;
+  box-shadow: 5.187px 5.187px 255.437px 0 rgba(0, 0, 0, 0.10);
 }
 
 .modal-form {
   width: 100%;
-  background: #ec7418;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
 .pay-form {
@@ -243,7 +249,6 @@ main {
   flex-direction: column;
   width: 100%;
   gap: 16px;
-  background: #ec18ba;
   margin: 0;
 }
 
@@ -255,3 +260,81 @@ main {
   font-size: 16px;
 }
 
+.modal-close {
+  width: 31.54px;
+  height: 31.54px;
+  position: absolute;
+  right: 15.887px;
+  top: 17.5px;
+  border-radius: 100px;
+  border: 1px solid #2e2e2e;
+  cursor: pointer;
+  background-color:  #FFFAEE;
+  transition: background-color 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: #dcdcdc;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 100%; /* 32px */
+}
+
+.pay-form input {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #E7E7E7;
+}
+
+.pay-form input::placeholder {
+  color: #757575;
+}
+
+/* Sucess Modal */
+
+.sucess-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 529px;
+  width: 536px;
+  padding: 32px 24px;
+  gap: 24px;
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid #D4D4D4;
+  background: #FFFAEE;
+  box-shadow: 5.187px 5.187px 255.437px 0 rgba(0, 0, 0, 0.10);
+}
+
+.sucess-header {
+  text-align: center;
+  color: #055E42;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+}
+
+.sucess-content{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sucess-body {
+  text-align: center;
+  color: #45937B;
+  font-size: 24px;
+  font-weight: 00;
+  letter-spacing: -0.72px;
+}
+
+.check-mark-img {
+  width: 250px;
+  height: 250px;
+}

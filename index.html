@@ -65,30 +65,43 @@
             </section>
 
             <!-- Check Out Modal -->
-
-            <div id="modal-overlay" class="modal-overlay hidden" aria-hidden="true">
                 
-                <div class="modal">
+            <div class="checkout-modal">
                   
-                    <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+                <button id="modal-close" class="modal-close" aria-label="Close">×</button>
                     
-                    <h3 class="modal-title">Enter card details</h3>
+                <h3 class="modal-title">Enter card details</h3>
               
-                    <!-- Payment Form -->
-                    <div id="modal-form" class="modal-form">
+                <!-- Payment Form -->
+                <div id="modal-form" class="modal-form">
               
-                        <form id="pay-form" class="pay-form">
-                            <input required id="input-name"  name="name"  placeholder="Enter your name" />
-                            <input required id="input-card"  name="card"  placeholder="Enter card number" inputmode="numeric" />
-                            <input required id="input-cvv"   name="cvv"   placeholder="Enter CVV" inputmode="numeric" />
-                            <button type="submit" class="btn-primary">Pay</button>
-                        </form>
+                    <form id="pay-form" class="pay-form">
+                        <input required id="input-name"  name="name"  placeholder="Enter your name" />
+                        <input required id="input-card"  name="card"  placeholder="Enter card number" inputmode="numeric" />
+                        <input required id="input-cvv"   name="cvv"   placeholder="Enter CVV" inputmode="numeric" />
+                    </form>
+
+                    <button type="submit" class="btn-primary">Pay</button>
                     
-                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Success Modal -->
+
+            <div class="sucess-modal">
+                
+                <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+                
+                <img class="check-mark-img" src="images/Checkmark.png" alt="check mark confirmation">
+                
+                <div class="sucess-content">
+                    
+                    <h3 class="sucess-header">Thank you James!</h3>
+                    <p class="sucess-body">Your order is on the way</p>
                 
                 </div>
-            
-            </div>
+                
                    
         </main>
 
