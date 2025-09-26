@@ -4,6 +4,7 @@ function getMenuArray(array){
   return array.map(property => {
   
     const {
+      id,
       name,
       ingredients,
       price,
@@ -11,9 +12,9 @@ function getMenuArray(array){
     } = property
     
     return `
-    <section class="item">
+    <section class="item" data-id="${id}">
       <div class="item-image">
-        <img src="images/${image}" alt="pizza">
+        <img src="images/${image}" alt="${image}">
       </div>
       <div class="item-details">
         <div class="item-details-container">
@@ -34,4 +35,35 @@ function getMenuArray(array){
 
 document.getElementById('main-container').innerHTML = getMenuArray(menuArray)
 
+// ---- Elments ----
+const $order = document.getElementById('order');
+const $orderItems = document.getElementById('order-items');
+const $totalEl = document.getElementById('order-total-amount');
+const $btnComplete = document.getElementById('btn-complete');
 
+// ---- Start Hidden ----
+$order.classList.add('hidden');
+
+// ---- State ----
+const cart = []; // [{ id, qty }]
+const byId = new Map(menuArray.map(m => [m.id, m]));
+
+// ---- Helpers ----
+function addToCard(id) {
+  const line = cart.find(l => l.id === id);
+  if (line) 
+    line.qty += 1;
+  else 
+    cart.push({ id, qty: 1 })
+  renderCart();
+}
+
+function removeAll(id) {
+  const i = cart.findIndex(l => l.id === id);
+  if (i !== -1) cart.splice(i, 1);
+  renderCart();
+}
+
+function cartTotal() {
+  return cart.reduce((sum, l) => sum + (byId.get(l.id)?.price || 0) * l.qty, 0);
+}

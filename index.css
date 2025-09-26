@@ -1,4 +1,4 @@
-/* helpful defaults */
+/* Global */
 * { box-sizing: border-box; }
 html, body { height: auto; }
 
@@ -13,14 +13,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* center the content */
+/* Center The Content */
 body {
   margin: 0;
   background: #FFFAEE; 
   padding: 96px 0;
 }
 
-/* main container */
+/* Main Container */
 main {
   display: flex;
   flex-direction: column;
@@ -119,18 +119,15 @@ main {
   line-height: 100%; /* 16px */
 }
 
-/* From Chatgpt */
-
-
-
 
 /* Order / Cart */
 
-.order {
+.order-hidden {
   display: flex;
   flex-direction: column;
   gap: 48px;
   width: 100%;
+  display: none;
 }
 
 .top-order {
@@ -221,6 +218,18 @@ main {
   letter-spacing: -0.5px;
 }
 
+/* Overlay */
+.hidden { display: none !important; }
+
+#order.hidden { display: none !important; }
+
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.25);
+  display: grid; place-items: center;
+  padding: 24px; z-index: 1000;
+}
+
 /* Checkout Modal */
 
 .checkout-modal {
@@ -296,7 +305,7 @@ main {
 
 /* Sucess Modal */
 
-.sucess-modal {
+.success-modal {
   display: flex;
   flex-direction: column;
   align-items: center;

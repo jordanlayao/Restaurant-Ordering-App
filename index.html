@@ -20,12 +20,13 @@
             <section class="main-container" id="main-container"></section>
 
             <!-- Order / Cart -->
-            <section id="order" class="order">
+            <section id="order" class="order-hidden">
                 
                 <div id="top-order" class="top-order">
                     
                     <div id="order-items" class="order-items">
-                        <div id="item-row" class="item-row">
+                        
+                        <!-- <div id="item-row" class="item-row">
                             <div class="row-item-title">
                                 <p class="item-title">Pizza</p>
                                 <button id="remove-btn" class="btn-link">remove</button>
@@ -47,7 +48,7 @@
                                 <button id="remove-btn" class="btn-link">remove</button>
                             </div>
                             <p class="item-price">$14</p>
-                        </div>
+                        </div> -->
                     
                     </div>
                     
@@ -66,42 +67,47 @@
 
             <!-- Check Out Modal -->
                 
-            <div class="checkout-modal">
-                  
-                <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+            <div id="overlay" class="overlay hidden" aria-hidden="true">
+                
+                <div class="checkout-modal">
                     
-                <h3 class="modal-title">Enter card details</h3>
-              
-                <!-- Payment Form -->
-                <div id="modal-form" class="modal-form">
-              
-                    <form id="pay-form" class="pay-form">
-                        <input required id="input-name"  name="name"  placeholder="Enter your name" />
-                        <input required id="input-card"  name="card"  placeholder="Enter card number" inputmode="numeric" />
-                        <input required id="input-cvv"   name="cvv"   placeholder="Enter CVV" inputmode="numeric" />
-                    </form>
+                    <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+                        
+                    <h3 class="modal-title">Enter card details</h3>
+                
+                    <!-- Payment Form -->
+                    <div id="modal-form" class="modal-form">
+                
+                        <form id="pay-form" class="pay-form">
+                            <input required id="input-name"  name="name"  placeholder="Enter your name" />
+                            <input required id="input-card"  name="card"  placeholder="Enter card number" inputmode="numeric" />
+                            <input required id="input-cvv"   name="cvv"   placeholder="Enter CVV" inputmode="numeric" />
+                        </form>
 
-                    <button type="submit" class="btn-primary">Pay</button>
+                        <button type="submit" class="btn-primary">Pay</button>
+                        
+                    </div>
                     
                 </div>
+
+                <!-- Success Modal -->
+
+                <div class="success-modal">
+                    
+                    <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+                    
+                    <img class="check-mark-img" src="images/Checkmark.png" alt="check mark confirmation">
+                    
+                    <div class="sucess-content">
+                        
+                        <h3 class="sucess-header">Thank you James!</h3>
+                        <p class="sucess-body">Your order is on the way</p>
+                    
+                    </div>
                 
+                </div>
+            
             </div>
-
-            <!-- Success Modal -->
-
-            <div class="sucess-modal">
-                
-                <button id="modal-close" class="modal-close" aria-label="Close">×</button>
-                
-                <img class="check-mark-img" src="images/Checkmark.png" alt="check mark confirmation">
-                
-                <div class="sucess-content">
-                    
-                    <h3 class="sucess-header">Thank you James!</h3>
-                    <p class="sucess-body">Your order is on the way</p>
-                
-                </div>
-                
                    
         </main>
 
