@@ -201,6 +201,14 @@ main {
   margin: 0;
 }
 
+#btn-complete{
+  margin-top: 24px;;
+}
+
+#btn-pay {
+  margin-top: 64px;
+}
+
 .btn-primary:hover{
   background: rgb(176, 5, 5);
 }

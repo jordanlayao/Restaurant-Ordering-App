@@ -1,13 +1,3 @@
-// create a static map
-import pizza from './images/Pizza.png';
-import burger from './images/Burger.png';
-import beer from './images/Beer.png';
-
-const imageByName = { 'Pizza.png': pizza, 'Burger.png': burger, 'Beer.png': beer };
-
-// then in the template:
-<img src="${imageByName[image]}" alt="${image}"></img>
-
 import { menuArray } from './data.js'
 // Ensure item images are bundled by Vite
 import pizzaImg from './images/Pizza.png';
