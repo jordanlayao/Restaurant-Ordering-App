@@ -20,7 +20,7 @@
             <section class="main-container" id="main-container"></section>
 
             <!-- Order / Cart -->
-            <section id="order" class="order-hidden">
+            <section id="order" class="order">
                 
                 <div id="top-order" class="top-order">
                     
@@ -56,7 +56,7 @@
                     
                     <div class="total-price">
                         <p>Total price:</p>
-                        <p>$0</p>
+                        <p id="order-total-amount">$0</p>
                     </div>
                 
                 </div>
@@ -65,49 +65,36 @@
             
             </section>
 
-            <!-- Check Out Modal -->
+            <!-- Check Out Overlay -->
                 
             <div id="overlay" class="overlay hidden" aria-hidden="true">
                 
-                <div class="checkout-modal">
-                    
-                    <button id="modal-close" class="modal-close" aria-label="Close">×</button>
-                        
-                    <h3 class="modal-title">Enter card details</h3>
-                
-                    <!-- Payment Form -->
-                    <div id="modal-form" class="modal-form">
-                
-                        <form id="pay-form" class="pay-form">
-                            <input required id="input-name"  name="name"  placeholder="Enter your name" />
-                            <input required id="input-card"  name="card"  placeholder="Enter card number" inputmode="numeric" />
-                            <input required id="input-cvv"   name="cvv"   placeholder="Enter CVV" inputmode="numeric" />
-                        </form>
-
-                        <button type="submit" class="btn-primary">Pay</button>
-                        
-                    </div>
-                    
+                <!-- Check Out Modal -->
+                <div id="checkout-modal" class="checkout-modal hidden" role="dialog" aria-modal="true">
+                  <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+                  <h3 class="modal-title">Enter card details</h3>
+              
+                  <!-- Payment Form -->
+                  <div id="modal-form" class="modal-form">
+                    <form id="pay-form" class="pay-form">
+                      <input required id="input-name"  name="name"  placeholder="Enter your name" />
+                      <input required id="input-card"  name="card"  placeholder="Enter card number" inputmode="numeric" />
+                      <input required id="input-cvv"   name="cvv"   placeholder="Enter CVV" inputmode="numeric" />
+                      <button id="btn-pay" type="button" class="btn-primary">Pay</button>
+                    </form>
+                  </div>
                 </div>
-
+              
                 <!-- Success Modal -->
-
-                <div class="success-modal">
-                    
-                    <button id="modal-close" class="modal-close" aria-label="Close">×</button>
-                    
-                    <img class="check-mark-img" src="images/Checkmark.png" alt="check mark confirmation">
-                    
-                    <div class="sucess-content">
-                        
-                        <h3 class="sucess-header">Thank you James!</h3>
-                        <p class="sucess-body">Your order is on the way</p>
-                    
-                    </div>
-                
+                <div id="success-modal" class="success-modal hidden" role="alertdialog" aria-modal="true">
+                  <button id="success-close" class="modal-close" aria-label="Close">×</button>
+                  <img class="check-mark-img" src="images/Checkmark.png" alt="check mark confirmation">
+                  <div class="success-content">
+                    <h3 class="success-header">Thank you <span id="success-name">Friend</span>!</h3>
+                    <p class="success-body">Your order is on the way</p>
+                  </div>
                 </div>
-            
-            </div>
+              </div>
                    
         </main>
 
